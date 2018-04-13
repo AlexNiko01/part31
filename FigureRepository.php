@@ -37,8 +37,10 @@ class FigureRepository
     {
         $figuresObjectsList = [];
         $randFiguresQuantity = mt_rand(3, 10);
+
         for ($i = 1; $i < $randFiguresQuantity; $i++) {
-            $figure = $figures[$i];
+            $randKey = mt_rand(0, count($figures) - 1);
+            $figure = $figures[$randKey];
             $figureObject = $this->registerFigure($figure);
             if ($figureObject != false) {
                 array_push($figuresObjectsList, $figureObject);
