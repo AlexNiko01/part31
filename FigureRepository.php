@@ -8,20 +8,37 @@
 
 class FigureRepository
 {
+
     private function registerFigure($figureClassName)
     {
+        $width = mt_rand(10, 100);
+        $height = mt_rand(10, 100);
+        $radius = mt_rand(10, 100);
         if ($figureClassName) {
             $figureObject = new $figureClassName;
+            if (property_exists($figureObject, 'width')) {
+                $figureObject->setWidth($width);
+            }
+            if (property_exists($figureObject, 'height')) {
+                $figureObject->setHeight($height);
+            }
+            if (property_exists($figureObject, 'radius')) {
+                $figureObject->setRadius($radius);
+            }
             return $figureObject;
         } else {
             return false;
         }
+
     }
+
 
     public function getFiguresList($figures)
     {
         $figuresObjectsList = [];
-        foreach ($figures as $figure) {
+        $randFiguresQuantity = mt_rand(3, 10);
+        for ($i = 1; $i < $randFiguresQuantity; $i++) {
+            $figure = $figures[$i];
             $figureObject = $this->registerFigure($figure);
             if ($figureObject != false) {
                 array_push($figuresObjectsList, $figureObject);

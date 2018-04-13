@@ -10,6 +10,6 @@ trait Nomination
 {
     public function getName()
     {
-        return get_class($this);
+        return strtolower(get_class($this));
     }
 }

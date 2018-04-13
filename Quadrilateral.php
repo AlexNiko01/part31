@@ -19,4 +19,14 @@ abstract class Quadrilateral implements GeometricFigure
         return $square;
     }
 
+    public function setWidth($width)
+    {
+        $this->width = $width;
+    }
+
+    public function setHeight($height)
+    {
+        $this->height = $height;
+    }
+
 }
