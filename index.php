@@ -18,7 +18,7 @@ require('Triangle.php');
 require('Circle.php');
 require('Square.php');
 require('Trapeze.php');
-require('FactoryMethod.php');
+require('FigureFactory.php');
 
 $allFiguresArr = [
     'triangle',
@@ -29,7 +29,7 @@ $allFiguresArr = [
     'trapeze',
     'circle'
 ];
-$repository = new FactoryMethod();
+$repository = new FigureFactory();
 
 
 $figuresObjectsList = $repository->getFiguresList($allFiguresArr); ?>
