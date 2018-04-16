@@ -9,7 +9,8 @@
 class Triangle implements GeometricFigure
 {
     use Nomination;
-    use Options;
+    use Width;
+    use Height;
 
     public function calculateSquare()
     {

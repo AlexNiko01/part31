@@ -7,12 +7,17 @@
  */
 require('GeometricFigure.php');
 require('Nomination.php');
-require('Options.php');
+require('Width.php');
+require('Height.php');
+require('Size.php');
 require('Quadrilateral.php');
 require('Rectangle.php');
 require('Parallelogram.php');
 require('Rhombus.php');
-require('Triangle.php'  );
+require('Triangle.php');
+require('Circle.php');
+require('Square.php');
+require('Trapeze.php');
 require('FigureRepository.php');
 
 $allFiguresArr = [
@@ -20,14 +25,24 @@ $allFiguresArr = [
     'parallelogram',
     'rhombus',
     'rectangle',
-//    'square',
-//    'trapeze',
-//    'circle'
+    'square',
+    'trapeze',
+    'circle'
 ];
 $repository = new FigureRepository();
 
-$figuresObjectsList = $repository->getFiguresList($allFiguresArr);
-var_dump($figuresObjectsList);
+$figuresObjectsList = $repository->getFiguresList($allFiguresArr); ?>
+    <table>
+        <?php
+        foreach ($figuresObjectsList as $item) {
+            ; ?>
+            <tr>
+                <?php
+                echo '<td>' . $item->getName() . '</td>';
+                echo '<td>' . $item->calculateSquare() . '</td>'; ?>
+            </tr>
+            <?php
 
-$figures = $repository->getFiguresData($figuresObjectsList);
-var_dump($figures);
+        }; ?>
+    </table>
+<?php

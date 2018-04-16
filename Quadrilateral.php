@@ -9,13 +9,13 @@
 abstract class Quadrilateral implements GeometricFigure
 {
     use Nomination;
-    use Options;
+    use Width;
+    use Height;
 
     public function calculateSquare()
     {
         $square = $this->width * $this->height;
         return $square;
     }
-
 
 }

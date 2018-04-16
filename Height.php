@@ -2,19 +2,13 @@
 /**
  * Created by PhpStorm.
  * User: alex
- * Date: 13.04.18
- * Time: 18:29
+ * Date: 16.04.18
+ * Time: 10:53
  */
 
-trait Options
+trait Height
 {
-    protected $width;
     protected $height;
-
-    public function setWidth($width)
-    {
-        $this->width = $width;
-    }
 
     public function setHeight($height)
     {

@@ -11,9 +11,10 @@ class FigureRepository
 
     private function registerFigure($figureClassName)
     {
-        $width = mt_rand(10, 100);
-        $height = mt_rand(10, 100);
-        $radius = mt_rand(10, 100);
+        $width = mt_rand(1, 5);
+        $height = mt_rand(1, 5);
+        $size = mt_rand(1, 5);
+        $baseWidth = mt_rand(1, 5);
         if ($figureClassName) {
             $figureObject = new $figureClassName;
             if (property_exists($figureObject, 'width')) {
@@ -22,8 +23,11 @@ class FigureRepository
             if (property_exists($figureObject, 'height')) {
                 $figureObject->setHeight($height);
             }
-            if (property_exists($figureObject, 'radius')) {
-                $figureObject->setRadius($radius);
+            if (property_exists($figureObject, 'size')) {
+                $figureObject->setSize($size);
+            }
+            if (property_exists($figureObject, 'baseWidth')) {
+                $figureObject->setBaseWidth($baseWidth);
             }
             return $figureObject;
         } else {
@@ -31,7 +35,6 @@ class FigureRepository
         }
 
     }
-
 
     public function getFiguresList($figures)
     {
@@ -47,19 +50,5 @@ class FigureRepository
             }
         }
         return $figuresObjectsList;
-    }
-
-    public function getFiguresData($figuresObjectsList)
-    {
-        $figures = [];
-        foreach ($figuresObjectsList as $figureObject) {
-            $figure = [];
-            $name = $figureObject->getName();
-            $square = $figureObject->calculateSquare();
-            $figure['name'] = $name;
-            $figure['square'] = $square;
-            $figures[] = $figure;
-        }
-        return $figures;
     }
 }
