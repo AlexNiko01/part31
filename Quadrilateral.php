@@ -12,7 +12,7 @@ abstract class Quadrilateral implements GeometricFigure
     use Width;
     use Height;
 
-    public function calculateSquare()
+    public function calculateSquare(): float
     {
         $square = $this->width * $this->height;
         return $square;

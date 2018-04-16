@@ -8,8 +8,12 @@
 
 trait Nomination
 {
-    public function getName()
+    public function getName(): string
     {
-        return strtolower(get_class($this));
+        $className = strtolower(get_class($this));
+        if(strripos($className, '/') != false){
+            $className = explode('/', $className)[count(explode('/', $className) - 1)];
+        }
+        return $className;
     }
 }

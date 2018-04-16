@@ -6,16 +6,22 @@
  * Time: 10:38
  */
 
+/**
+ * Class FigureRepository
+ */
 class FigureRepository
 {
-
-    private function registerFigure($figureClassName)
+    /**
+     * @param string|null $figureClassName
+     * @return bool
+     */
+    private function registerFigure(string $figureClassName): object
     {
         $width = mt_rand(1, 5);
         $height = mt_rand(1, 5);
         $size = mt_rand(1, 5);
         $baseWidth = mt_rand(1, 5);
-        if ($figureClassName) {
+        if (class_exists($figureClassName)) {
             $figureObject = new $figureClassName;
             if (property_exists($figureObject, 'width')) {
                 $figureObject->setWidth($width);
@@ -36,12 +42,16 @@ class FigureRepository
 
     }
 
-    public function getFiguresList($figures)
+    /**
+     * @param array $figures
+     * @return array
+     */
+    public function getFiguresList(array $figures): array
     {
         $figuresObjectsList = [];
         $randFiguresQuantity = mt_rand(3, 10);
 
-        for ($i = 1; $i < $randFiguresQuantity; $i++) {
+        for ($i = 0 ; $i < $randFiguresQuantity; $i++) {
             $randKey = mt_rand(0, count($figures) - 1);
             $figure = $figures[$randKey];
             $figureObject = $this->registerFigure($figure);

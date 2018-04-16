@@ -10,7 +10,7 @@ trait Height
 {
     protected $height;
 
-    public function setHeight($height)
+    public function setHeight(int $height): void
     {
         $this->height = $height;
     }

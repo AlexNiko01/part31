@@ -11,7 +11,7 @@ trait Width
     protected $width;
 
 
-    public function setWidth($width)
+    public function setWidth(int $width): void
     {
         $this->width = $width;
     }

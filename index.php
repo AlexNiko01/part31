@@ -32,7 +32,11 @@ $allFiguresArr = [
 $repository = new FigureRepository();
 
 $figuresObjectsList = $repository->getFiguresList($allFiguresArr); ?>
-    <table>
+    <table style="text-align: left">
+        <tr>
+            <th>Name</th>
+            <th>Square</th>
+        </tr>
         <?php
         foreach ($figuresObjectsList as $item) {
             ; ?>

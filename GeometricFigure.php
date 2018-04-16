@@ -8,7 +8,7 @@
 
 interface GeometricFigure
 {
-    public function getName();
+    public function getName(): string;
 
-    public function calculateSquare();
+    public function calculateSquare(): float;
 }

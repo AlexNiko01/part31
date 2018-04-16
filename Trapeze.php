@@ -13,13 +13,13 @@ class Trapeze implements GeometricFigure
     use Height;
     protected $baseWidth;
 
-    public function calculateSquare()
+    public function calculateSquare(): float
     {
         $square = $this->height * ($this->baseWidth + $this->width) / 2;
         return $square;
     }
 
-    public function setBaseWidth($baseWidth)
+    public function setBaseWidth(int $baseWidth): void
     {
         $this->baseWidth = $baseWidth;
     }

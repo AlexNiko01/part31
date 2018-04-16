@@ -11,7 +11,7 @@ class Square implements GeometricFigure
     use Nomination;
     use Size;
 
-    public function calculateSquare()
+    public function calculateSquare(): float
     {
         $square = pow($this->size, 2);
         return $square;

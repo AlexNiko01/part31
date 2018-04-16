@@ -12,10 +12,9 @@ class Triangle implements GeometricFigure
     use Width;
     use Height;
 
-    public function calculateSquare()
+    public function calculateSquare(): float
     {
-        $square = ($this->width * $this->height) / 2;
-        return $square;
+        return ($this->width * $this->height) / 2;
     }
 
 }
