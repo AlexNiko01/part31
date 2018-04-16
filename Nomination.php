@@ -1,13 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 13.04.18
- * Time: 14:53
- */
 
 /**
- * Trait Nomination, returns figures name
+ * Trait Nomination, returns name
  */
 trait Nomination
 {

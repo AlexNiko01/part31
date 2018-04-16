@@ -1,16 +1,16 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 16.04.18
- * Time: 10:01
- */
 
+/**
+ * Class Square
+ */
 class Square implements GeometricFigure
 {
     use Nomination;
     use Size;
 
+    /**
+     * @return float
+     */
     public function calculateSquare(): float
     {
         $square = pow($this->size, 2);

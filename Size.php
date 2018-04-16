@@ -1,13 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 16.04.18
- * Time: 9:54
- */
 
 /**
- * Trait Size, sets figure main parameter value
+ * Trait Size, sets main parameter value
  */
 trait Size
 {

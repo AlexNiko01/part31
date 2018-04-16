@@ -1,19 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 13.04.18
- * Time: 10:38
- */
 
 /**
- * Class FactoryMethod
+ * Class FigureFactory
  */
-class FactoryMethod
+class FigureFactory
 {
     /**
      * @param string|null $figureClassName
-     * @return object
+     * @return object|bool
      */
     private function registerFigure(string $figureClassName): object
     {
@@ -44,7 +38,6 @@ class FactoryMethod
                 case ('Circle'):
                     $figureObject->setSize($size);
                     break;
-
                 case ('Square'):
                     $figureObject->setSize($size);
                     break;

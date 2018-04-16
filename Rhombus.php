@@ -1,11 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 13.04.18
- * Time: 17:57
- */
 
+/**
+ * Class Rhombus
+ */
 class Rhombus extends Quadrilateral
 {
 
