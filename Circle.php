@@ -13,7 +13,7 @@ class Circle implements GeometricFigure
 
     public function calculateSquare(): float
     {
-        $square = pow($this->size, 2) * 3.14;
+        $square = pow($this->size, 2) * M_PI;
         return $square;
     }
 

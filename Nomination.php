@@ -6,8 +6,14 @@
  * Time: 14:53
  */
 
+/**
+ * Trait Nomination, returns figures name
+ */
 trait Nomination
 {
+    /**
+     * @return string
+     */
     public function getName(): string
     {
         $className = strtolower(get_class($this));
