@@ -19,13 +19,7 @@ class FigureFactory
             $figureObject = new $figureClassName;
             switch ($figureClassName){
                 case ('Parallelogram'):
-                    $figureObject->setWidth($width);
-                    $figureObject->setHeight($height);
-                    break;
                 case ('Rhombus'):
-                    $figureObject->setWidth($width);
-                    $figureObject->setHeight($height);
-                    break;
                 case ('Rectangle'):
                     $figureObject->setWidth($width);
                     $figureObject->setHeight($height);
@@ -36,8 +30,6 @@ class FigureFactory
                     $figureObject->setBaseWidth($baseWidth);
                     break;
                 case ('Circle'):
-                    $figureObject->setSize($size);
-                    break;
                 case ('Square'):
                     $figureObject->setSize($size);
                     break;

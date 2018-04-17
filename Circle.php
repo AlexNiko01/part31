@@ -1,9 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: alex
- * Date: 16.04.18
- * Time: 9:56
+ * Class Circle
  */
 
 class Circle implements GeometricFigure
@@ -11,9 +8,12 @@ class Circle implements GeometricFigure
     use Nomination;
     use Size;
 
+    /**
+     * @return float
+     */
     public function calculateSquare(): float
     {
-        $square = pow($this->size, 2) * M_PI;
+        $square = round(pow($this->size, 2) * M_PI);
         return $square;
     }
 
